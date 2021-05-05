@@ -118,7 +118,7 @@ RUN ninja -vC build install
 COPY --from=registry.gitlab.com/luigi311/encoders-docker/aomenc:latest /usr/local/bin/aomenc /usr/local/bin
 
 # Install svt-av1
-COPY --from=registry.gitlab.com/luigi311/encoders-docker/svt-av1:latest /usr/local/bin/SvtAv1EncApp /usr/local/bin
+COPY --from=sohex/svt-av1:color /usr/local/bin/SvtAv1EncApp /usr/local/bin
 
 # Install rav1e
 COPY --from=registry.gitlab.com/luigi311/encoders-docker/rav1e:latest /usr/local/bin/rav1e /usr/local/bin
